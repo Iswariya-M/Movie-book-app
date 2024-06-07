@@ -1,0 +1,53 @@
+<app-navbar></app-navbar>
+<body>
+  <div class="dashboard-container">
+    <div class="sidebar">
+        <h2>Admin Dashboard</h2>
+        <ul>
+          <a routerLink="/admin"><li>Dashboard</li></a>
+          <br>
+          <a routerLink="/seats"><li>Shows & Seats Availability</li></a>
+          <br>
+          <a routerLink="/view"><li>View User Bookingd</li></a>
+        </ul>
+      </div>
+    <div class="main-content">
+      <div class="right">
+        <h2>Shows and Seats Availability</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Theatre</th>
+              <th>Date</th>
+              <th>Row 1</th>
+              <th>Row 2</th>
+              <th>Row 3</th>
+              <th>Row 4</th>
+              <th>Row 5</th>
+              <th>Row 6</th>
+              <th>Row 7</th>
+              <th>Row 8</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let booking of bookings">
+              <td>{{ booking.title }}</td>
+              <td>{{ booking.theatre }}</td>
+              <td>{{ booking.date }}</td>
+              <td>{{ booking.seats_row1 }}</td>
+              <td>{{ booking.seats_row2 }}</td>
+              <td>{{ booking.seats_row3 }}</td>
+              <td>{{ booking.seats_row4 }}</td>
+              <td>{{ booking.seats_row5 }}</td>
+              <td>{{ booking.seats_row6 }}</td>
+              <td>{{ booking.seats_row7 }}</td>
+              <td>{{ booking.seats_row8 }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+<app-footer></app-footer>

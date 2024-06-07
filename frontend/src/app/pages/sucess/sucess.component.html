@@ -1,0 +1,17 @@
+<app-navbar></app-navbar>
+<section>
+  <div class="form-container">
+    <h2>Payment Success</h2>
+    <div *ngIf="booking" class="booking-details">
+      <p>Title: {{ booking.title }}</p>
+      <p>Theatre: {{ booking.theatre }}</p>
+      <p>Date: {{ booking.date }}</p>
+      <p>Seats: {{ booking.seats }}</p>
+      <p>Total Amount: {{ totalAmount }}</p>
+    </div>
+    <div class="form-group">
+      <button (click)="goToHome()" class="btn btn-primary">Go to Home</button>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>

@@ -1,0 +1,91 @@
+/* CSS */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  a{
+    color: #353434;
+    text-decoration: none;
+    display: inline-block;
+   
+    transition: opacity 0.5s ease;
+  }
+  a:hover{
+    opacity: 0.7;
+  }
+  
+  .dashboard-container {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color:rgb(233, 225, 225);
+    color: black;
+    padding: 20px;
+  }
+  
+  .sidebar h2 {
+    margin-top: 0;
+    font-size: 24px;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 10px 0;
+    font-size: 18px;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .main-content h2{
+    color: black;
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .section {
+    margin-bottom: 30px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section h2,p {
+    margin-top: 0;
+    text-align: center;
+    color: black;
+  }
+  
+
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    color: black;
+  }
+  
+  table th {
+    background-color: #f2f2f2;
+    color: black;
+  }
+  
+  
+  

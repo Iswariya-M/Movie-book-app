@@ -1,0 +1,54 @@
+<app-navbar></app-navbar>
+
+<section class="carousel">
+  <div class="carousel-inner" [style.transform]="getTransformStyle()">
+    <div class="carousel-item" *ngFor="let image of carouselImages">
+      <img [src]="image.url" alt="Slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" (click)="prevSlide()">&#10094;</a>
+  <a class="carousel-control-next" (click)="nextSlide()">&#10095;</a>
+</section>
+<div class="homecont">
+
+
+  <section >
+    <h2>Recommended Movies</h2>
+  
+  <div class="movies-container">
+      
+      
+        <div *ngFor="let movie of recommendedMovies" class="movie-item" (click)="goToMovieDetails(movie.id)">
+          
+            <img [src]="movie.imageUrl" alt="{{ movie.title }}">
+            <h3>{{ movie.title }}</h3>
+            <p>Genre: {{ movie.genre }}</p>
+            <p>Rating: {{ movie.rating }}</p>
+          </div>
+        </div>
+  </section>
+  
+        <br>
+   
+   <section>
+  
+     <h2>Now Showing</h2>
+  <div class="movies-container">
+      
+        <div *ngFor="let movie of nowShowingMovies" class="movie-item" (click)="goToMovieDetails(movie.title)">
+            <img [src]="movie.imageUrl" alt="{{ movie.title }}">
+            <h3>{{ movie.title }}</h3>
+            <p>Genre: {{ movie.genre }}</p>
+            <p>Rating: {{ movie.rating }}</p>
+          </div>
+        </div>
+        
+  </section>
+  </div>
+  
+  <br>
+      
+  
+  
+  <app-footer></app-footer>
+  

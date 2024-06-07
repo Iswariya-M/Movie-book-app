@@ -1,0 +1,116 @@
+body {
+    font-family: 'Arial, sans-serif';
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+  }
+  
+  .title {
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 100px;
+  }
+  
+  .main-content {
+    display: flex;
+    justify-content: space-between;
+    
+  
+  }
+  
+  .theater-list {
+    list-style-type: none;
+    padding: 0;
+    flex: 1;
+    margin: 0 20px;
+    text-align: center;
+  }
+  
+  .theater-item {
+    display: inline-block;
+    background-color: #fff;
+    padding: 10px 15px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .theater-item:hover {
+    background-color: #efefef;
+  }
+  
+  .theater-details {
+    flex: 2;
+    padding-left: 20px;
+    border-left: 1px solid #ddd;
+    width: 100%;
+  }
+  
+  .selected-theater {
+    font-size: 1.5em;
+    color: rgb(61, 61, 61);
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .selected {
+    font-weight: bold;
+    background-color: #f0f0f0;
+  }
+  
+  
+  .details-section {
+    margin-top: 30px;
+    /* width: 900px; */
+  }
+  
+  .details-title {
+    font-size: 1.8em;
+    color: #555;
+    margin-bottom: 15px;
+    
+  }
+  
+ /* Updated styles for displaying movies in a grid with 3 items in the same line */
+.details-grid {
+  white-space: nowrap; /* Prevent line breaks */
+  /* overflow-x: auto; Enable horizontal scrolling if items overflow */
+  padding-bottom: 20px; /* Add padding to ensure space for scrollbar */
+}
+
+.detail-card {
+  display: inline-block; /* Display items inline */
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 250px; /* Each item has a fixed width of 300px */
+  margin-right: 20px; /* Add margin between items */
+  vertical-align: top; /* Align items at the top */
+}
+
+.detail-card:last-child {
+  margin-right: 0; /* Remove right margin from the last item */
+}
+
+  
+  .detail-title, .detail-date {
+    font-size: 1.1em;
+    color: #666;
+    margin: 5px 0;
+  }
+  

@@ -1,0 +1,51 @@
+<!-- <app-navbar></app-navbar>
+<section>
+  <div class="container">
+    <div class="payment-form">
+      <h2>Payment Page</h2>
+      <form (submit)="submitPayment()">
+        <label for="name">Bank Holder Name:</label>
+        <input type="text" id="name" name="name" [(ngModel)]="formData.name" required><br><br>
+  
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" [(ngModel)]="formData.email" required><br><br>
+  
+        <label for="creditCard">Credit Card Number:</label>
+        <input type="text" id="creditCard" name="creditCard" [(ngModel)]="formData.creditCard" required><br><br>
+        
+        <label for="pin">PIN:</label>
+        <input type="password" id="pin" name="pin" [(ngModel)]="formData.pin" required><br><br>
+        
+        <button type="submit">Pay Now</button>
+      </form>
+    </div>
+  </div>
+</section> -->
+
+<app-navbar></app-navbar>
+<section>
+  <div class="form-container">
+    <h2>Payment Page</h2>
+    <div *ngIf="booking" class="booking-details">
+      <p>Title: {{ booking.title }}</p>
+      <p>Theatre: {{ booking.theatre }}</p>
+      <p>Date: {{ booking.date }}</p>
+      <p>Seats: {{ booking.seats }}</p>
+      <p>Total Amount: {{ totalAmount }}</p>
+    </div>
+    <div class="form-group">
+      <label for="cardNumber">Card Number:</label>
+      <input type="text" id="cardNumber" name="cardNumber" [(ngModel)]="paymentDetails.cardNumber" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="expiryDate">Expiry Date:</label>
+      <input type="text" id="expiryDate" name="expiryDate" [(ngModel)]="paymentDetails.expiryDate" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="cvv">CVV:</label>
+      <input type="text" id="cvv" name="cvv" [(ngModel)]="paymentDetails.cvv" class="form-control">
+    </div>
+    <button (click)="processPayment()" class="btn btn-primary">Pay</button>
+  </div>
+</section>
+<app-footer></app-footer>

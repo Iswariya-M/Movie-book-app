@@ -1,0 +1,69 @@
+<app-navbar></app-navbar>
+<div class="form-container">
+  <h2>Booking Form</h2>
+  <div class="form-group">
+    <label for="title">Title:</label>
+    <select id="title" name="title" [(ngModel)]="booking.title" class="form-control">
+      <option *ngFor="let titleObj of titles" [value]="titleObj.title">{{ titleObj.title }}</option>
+    </select>
+  </div>
+  
+  <div class="form-group">
+    <label for="theatre">Theatre:</label>
+    <select id="theatre" name="theatre" [(ngModel)]="booking.theatre" class="form-control">
+      <option *ngFor="let theatre of theatres" [value]="theatre.theatre">{{ theatre.theatre }}</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="date">Date:</label>
+    <select id="date" name="date" [(ngModel)]="booking.date" class="form-control">
+      <option *ngFor="let date of dates" [value]="date.date">{{ date.date }}</option>
+    </select>
+  </div>
+  <div>
+    <label for="seats">Seats:</label>
+    <input type="number" id="seats" name="seats" [(ngModel)]="booking.seats">
+  </div>
+
+  <button (click)="submitForm()" class="btn btn-primary">Submit</button>
+</div>
+
+<div class="right">
+  <h2>Available Shows and Seats</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Theatre</th>
+        <th>Date</th>
+        <th>Show time</th>
+        <th> Row 1</th>
+        <th> Row 2</th>
+        <th> Row 3</th>
+        <th> Row 4</th>
+        <th> Row 5</th>
+        <th> Row 6</th>
+        <th> Row 7</th>
+        <th> Row 8</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let booking of bookings">
+        <td>{{ booking.title }}</td>
+        <td>{{ booking.theatre }}</td>
+        <td>{{ booking.date }}</td>
+        <td>10.00 AM</td>
+        <td>{{ booking.seats_row1 }}</td>
+        <td>{{ booking.seats_row2 }}</td>
+        <td>{{ booking.seats_row3 }}</td>
+        <td>{{ booking.seats_row4 }}</td>
+        <td>{{ booking.seats_row5 }}</td>
+        <td>{{ booking.seats_row6 }}</td>
+        <td>{{ booking.seats_row7 }}</td>
+        <td>{{ booking.seats_row8 }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+<app-footer></app-footer>

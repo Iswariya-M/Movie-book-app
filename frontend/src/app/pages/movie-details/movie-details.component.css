@@ -1,0 +1,70 @@
+
+.movie-details-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:50px;
+    margin-top: 60px;
+  }
+  
+  .movie-image {
+    margin-right: 20px; 
+
+   
+  }
+  .movie-image img{
+    width:400px;
+    height:600px;
+    object-fit: cover;
+  }
+  
+  
+  .movie-details {
+    
+    width:50%;
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 7px 7px 20px rgba(0,0,0,0.3);
+    
+    
+  }
+  .movie-details p{
+    font-size: 18px;
+  }
+ 
+  .movie-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: rgb(51, 49, 49);
+  }
+  
+ 
+  .movie-info {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+ 
+  .movie-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+    
+  }
+
+  .book-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color:black;
+    background-color:rgb(233, 225, 225);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 50px;
+}
+
+.book-button:hover {
+    background-color: darkcyan;
+}
+  

@@ -1,0 +1,17 @@
+<app-navbar></app-navbar>
+
+<div *ngIf="movie" class="movie-details-container">
+    <div class="movie-image">
+        <img [src]="movie.imageUrl" alt="{{ movie.name }}">
+    </div>
+    <div class="movie-details">
+        <h2 class="movie-title">{{ movie.title }}</h2>
+        <p class="movie-info"><b>Genre: </b>{{ movie.genre }}</p>
+        <p class="movie-description">
+            <b>Description: </b>{{ movie.description }}
+        </p>
+        <p class="movie-rating"><b>Rating: </b>{{ movie.rating }}</p>
+        <p class="movie-info"><b>Directed By: </b>Shankar</p>
+        <button class="book-button">Book Your Tickets Now!</button>
+    </div>
+</div>

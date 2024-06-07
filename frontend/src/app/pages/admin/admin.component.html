@@ -1,0 +1,82 @@
+<app-navbar></app-navbar>
+<body>
+  <div class="dashboard-container">
+    <div class="sidebar">
+      <h2>Admin Dashboard</h2>
+      <ul>
+        <a routerLink="/admin"><li>Dashboard</li></a>
+        <br>
+        <a routerLink="/seats"><li>Shows & Seats Availability</li></a>
+        <br>
+        <a routerLink="/view"><li>View User Bookingd</li></a>
+      </ul>
+    </div>
+    <div class="main-content">
+      <div class="section">
+        <h2>Welcome to Admin Dashboard</h2>
+        <p>This is the admin dashboard section. You can manage movies, theatres, and bookings here. The admin dashboard provides a comprehensive overview and management capabilities for the movie booking system.</p>
+        
+        <h3>Manage Movies</h3>
+        <p>In this section, you can add new movies, update existing movie information, and delete movies that are no longer showing. Each movie profile includes details such as title, genre, release date, duration, and synopsis. Keeping this information up-to-date ensures that customers can easily find and book tickets for the movies they want to watch.</p>
+        
+        <h3>Manage Theatres</h3>
+        <p>The theatre management section allows you to view all available theatres, add new theatres, and update information about existing theatres. Details such as theatre name, location, and seating capacity are crucial for organizing movie showings and managing bookings efficiently.</p>
+        
+        <h3>View Bookings</h3>
+        <p>The booking management section allows you to view all upcoming bookings, sorted by date. You can see details of each booking, including the customer's name, contact information, the movie they are watching, the theatre, and the booking date. Efficient booking management helps in reducing no-shows and improving customer satisfaction.</p>
+        
+        <h3>View Theatres</h3>
+        <p>Understanding the various theatres available for movie showings is crucial for both admin staff and customers. Each theatre comes with a set of features such as screen size, sound system, and seating arrangement. By categorizing theatres based on these features, the admin can ensure that customers have a great movie-watching experience tailored to their preferences.</p>
+        
+        <p>The admin dashboard is a vital tool in the efficient management of the movie booking system. By leveraging its features, you can ensure that the system runs smoothly, providing high-quality service to all customers. Stay organized, keep information current, and utilize the analytics to drive improvements in all aspects of the movie booking administration.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="left">
+    <div class="form-container">
+    <div class="form-box">
+    <h2>Add Booking Details</h2>
+    
+    <form class="booking-form"  (submit)="submitForm()">
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" [(ngModel)]="booking.title" required><br>
+      
+      <label for="theatre">Theatre:</label>
+      <input type="text" id="theatre" name="theatre" [(ngModel)]="booking.theatre" required><br>
+      
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date" [(ngModel)]="booking.date" required><br>
+    
+      <label for="seats-row1">Row 1:</label>
+      <input type="number" id="seats-row1" name="seats-row1" [(ngModel)]="booking.seats.row1" required><br>
+      
+      <label for="seats-row2">Row 2:</label>
+      <input type="number" id="seats-row2" name="seats-row2" [(ngModel)]="booking.seats.row2" required><br>
+      
+      <label for="seats-row3">Row 3:</label>
+      <input type="number" id="seats-row3" name="seats-row3" [(ngModel)]="booking.seats.row3" required><br>
+      
+      <label for="seats-row4">Row 4:</label>
+      <input type="number" id="seats-row4" name="seats-row4" [(ngModel)]="booking.seats.row4" required><br>
+      
+      <label for="seats-row5">Row 5:</label>
+      <input type="number" id="seats-row5" name="seats-row5" [(ngModel)]="booking.seats.row5" required><br>
+      
+      <label for="seats-row6">Seats Row 6:</label>
+      <input type="number" id="seats-row6" name="seats-row6" [(ngModel)]="booking.seats.row6" required><br>
+      
+      <label for="seats-row7">Row 7:</label>
+      <input type="number" id="seats-row7" name="seats-row7" [(ngModel)]="booking.seats.row7" required><br>
+      
+      <label for="seats-row8">Row 8:</label>
+      <input type="number" id="seats-row8" name="seats-row8" [(ngModel)]="booking.seats.row8" required><br>
+      
+      <button type="submit">Submit</button>
+    </form>
+    </div>
+    </div>
+    
+      </div> -->
+</body>
+<app-footer></app-footer>

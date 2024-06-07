@@ -1,0 +1,12 @@
+<app-navbar></app-navbar>
+<div class="input-box">
+    <input type="text" [(ngModel)]="searchQuery" placeholder="Search for a movie..." (input)="searchMovies()">
+</div>
+  
+<div class="movies-container">
+  
+    <div *ngFor="let movie of filteredMovies" class="movie-item" (click)="goToMovieDetails(movie.id)">
+      <img [src]="movie.imageUrl" alt="{{ movie.title }}">
+      <h3>{{ movie.title }}</h3>
+  </div>
+</div>

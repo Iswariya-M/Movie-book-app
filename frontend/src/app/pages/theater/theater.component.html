@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+<h2 class="title">Theaters</h2>
+<div class="container">
+  <div class="main-content">
+    <ul class="theater-list">
+      <li *ngFor="let theater of theaters" 
+          (click)="selectTheater(theater)" 
+          [class.selected]="theater === selectedTheater" 
+          class="theater-item">
+        {{ theater }}
+      </li>
+    </ul>
+
+    <div class="theater-details">
+      <h3 *ngIf="selectedTheater" class="selected-theater">Selected Theater: {{ selectedTheater }}</h3>
+      <div *ngIf="selectedTheaterDetails.length > 0" class="details-section">
+        <h4 class="details-title">Shows</h4>
+        <div class="details-grid">
+          <div *ngFor="let detail of selectedTheaterDetails" class="detail-card">
+            <p class="detail-title">Title: {{ detail.title }}</p>
+            <p class="detail-date">Date: {{ detail.date }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

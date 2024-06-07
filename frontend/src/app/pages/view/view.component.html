@@ -1,0 +1,40 @@
+<app-navbar></app-navbar>
+<body>
+  <div class="dashboard-container">
+    <div class="sidebar">
+        <h2>Admin Dashboard</h2>
+        <ul>
+          <a routerLink="/admin"><li>Dashboard</li></a>
+          <br>
+          <a routerLink="/seats"><li>Shows & Seats Availability</li></a>
+          <br>
+          <a routerLink="/view"><li>View User Bookingd</li></a>
+        </ul>
+      </div>
+    <div class="main-content">
+      <h2>User Bookings</h2>
+      <div class="section user">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Theatre</th>
+              <th>Date</th>
+              <th>Seats</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let userBooking of userBookings">
+              <td>{{ userBooking.title }}</td>
+              <td>{{ userBooking.theatre }}</td>
+              <td>{{ userBooking.date | date:'dd-MM-yyyy' }}</td>
+              <td>{{ userBooking.seats }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+
+<app-footer></app-footer>
